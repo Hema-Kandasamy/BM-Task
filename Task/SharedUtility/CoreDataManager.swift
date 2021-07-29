@@ -14,6 +14,7 @@ class CoreDataManager {
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
+    
     private init() {
         persistentContainer = NSPersistentContainer(name: "Task")
         persistentContainer.loadPersistentStores { (storDEsc, error) in
@@ -32,7 +33,7 @@ class CoreDataManager {
         }
     }
     
-    func getAllValues() -> [ContentDataModel]? {
+    func getContentDataModel() -> [ContentDataModel]? {
         let request: NSFetchRequest = ContentDataModel.fetchRequest()
         do {
             return try context.fetch(request)
@@ -42,8 +43,18 @@ class CoreDataManager {
         }
     }
     
+    func getFormFieldDataModel() -> [FormFieldDataModel]? {
+        let request: NSFetchRequest = FormFieldDataModel.fetchRequest()
+        do {
+            return try context.fetch(request)
+        } catch {
+            print("Core Data Fetch error", error)
+            return []
+        }
+    }
+    
     func deleteEntry() {
-        let object = getAllValues()
+        let object = getContentDataModel()
         object?.forEach { context.delete($0) }
     }
 }

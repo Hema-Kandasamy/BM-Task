@@ -54,6 +54,12 @@ extension HomeViewController: HomeViewDelegate {
         let vc = DetailViewCOntroller.make(with: users)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func homeViewdidTapPrimaryButton(_ view: HomeView) {
+        let vc = FormViewController.initFromStoryBoard()
+        vc.viewModel = FormViewModel()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
 

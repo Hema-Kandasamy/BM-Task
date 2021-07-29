@@ -82,7 +82,7 @@ extension HomeViewModel {
     }
     
     func getFromCoreData() {
-        let values = CoreDataManager.shared.getAllValues()
+        let values = CoreDataManager.shared.getContentDataModel()
         let value = values?.compactMap { (dataModel) -> [String] in
             let custTypeData = dataModel.customerType
             return dataToArray(data: custTypeData ?? Data())

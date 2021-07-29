@@ -6,7 +6,13 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="orderStatus" optional="YES" attributeType="Binary"/>
     </entity>
+    <entity name="FormFieldDataModel" representedClassName="FormFieldDataModel" syncable="YES" codeGenerationType="class">
+        <attribute name="epithet" optional="YES" attributeType="String"/>
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="ContentDataModel" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="FormFieldDataModel" positionX="-63" positionY="9" width="128" height="88"/>
     </elements>
 </model>

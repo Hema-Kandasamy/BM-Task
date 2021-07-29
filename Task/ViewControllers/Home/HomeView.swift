@@ -13,6 +13,7 @@ import RxCocoa
 
 protocol HomeViewDelegate: class {
     func homeView(_ view: HomeView, didSelectUserWith users: [UsersType])
+    func homeViewdidTapPrimaryButton(_ view: HomeView)
 }
 class HomeView: UIView {
     
@@ -20,6 +21,7 @@ class HomeView: UIView {
     @IBOutlet var orderStatusTextfield: UITextField!
     @IBOutlet weak var customerTYpeTextField: UITextField!
     @IBOutlet weak var listTableView: UITableView!
+    
     private lazy var pickerView: UIPickerView = {
         return UIPickerView()
     }()
@@ -67,6 +69,10 @@ class HomeView: UIView {
         /*let label = UILabel()
         label.text = error
         self.addWithInBounds(view: label)*/
+    }
+    
+    @IBAction func formButton(_ sender: Any) {
+        delegate?.homeViewdidTapPrimaryButton(self)
     }
 }
 

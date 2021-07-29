@@ -42,6 +42,13 @@
 		C332E62026ADF93200E1E811 /* CustomRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C332E61E26ADF93200E1E811 /* CustomRadioButton.swift */; };
 		C332E62126ADF93200E1E811 /* CustomRadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C332E61F26ADF93200E1E811 /* CustomRadioButtonViewController.swift */; };
 		C39BDAE026AD798A0059C167 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39BDADF26AD798A0059C167 /* CoreDataManager.swift */; };
+		C3F2FC1B26B27649007B6394 /* Style+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F2FC1A26B27649007B6394 /* Style+UITextField.swift */; };
+		C3F2FC2026B276C5007B6394 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F2FC1F26B276C5007B6394 /* FormViewController.swift */; };
+		C3F2FC2626B276DA007B6394 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F2FC2526B276DA007B6394 /* FormView.swift */; };
+		C3F2FC2A26B276E9007B6394 /* FormViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3F2FC2926B276E9007B6394 /* FormViewController.storyboard */; };
+		C3F2FC2E26B276F6007B6394 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F2FC2D26B276F6007B6394 /* FormViewModel.swift */; };
+		C3F2FC3326B27B46007B6394 /* FormFieldValidationRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F2FC3126B27B45007B6394 /* FormFieldValidationRules.swift */; };
+		C3F2FC3426B27B46007B6394 /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F2FC3226B27B46007B6394 /* FormField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +127,13 @@
 		C332E61E26ADF93200E1E811 /* CustomRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRadioButton.swift; sourceTree = "<group>"; };
 		C332E61F26ADF93200E1E811 /* CustomRadioButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRadioButtonViewController.swift; sourceTree = "<group>"; };
 		C39BDADF26AD798A0059C167 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C3F2FC1A26B27649007B6394 /* Style+UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Style+UITextField.swift"; sourceTree = "<group>"; };
+		C3F2FC1F26B276C5007B6394 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		C3F2FC2526B276DA007B6394 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		C3F2FC2926B276E9007B6394 /* FormViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormViewController.storyboard; sourceTree = "<group>"; };
+		C3F2FC2D26B276F6007B6394 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		C3F2FC3126B27B45007B6394 /* FormFieldValidationRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormFieldValidationRules.swift; sourceTree = "<group>"; };
+		C3F2FC3226B27B46007B6394 /* FormField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		C9BB5BC02941BD335D874B1E /* Pods-TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-TaskTests/Pods-TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E6C3083CB533858D2D629528 /* Pods-Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Task.debug.xcconfig"; path = "Target Support Files/Pods-Task/Pods-Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,6 +298,7 @@
 		BAEC2C852631836900FF40F4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3F2FC1E26B276A9007B6394 /* Form */,
 				C3134CA926AC6FC50078BED1 /* AppointmentDetail */,
 				BACBA4C026323737003E2FC3 /* Home */,
 			);
@@ -317,10 +332,24 @@
 		C332E62426ADF94A00E1E811 /* ReusableButton */ = {
 			isa = PBXGroup;
 			children = (
+				C3F2FC3226B27B46007B6394 /* FormField.swift */,
+				C3F2FC3126B27B45007B6394 /* FormFieldValidationRules.swift */,
+				C3F2FC1A26B27649007B6394 /* Style+UITextField.swift */,
 				C332E61E26ADF93200E1E811 /* CustomRadioButton.swift */,
 				C332E61F26ADF93200E1E811 /* CustomRadioButtonViewController.swift */,
 			);
 			path = ReusableButton;
+			sourceTree = "<group>";
+		};
+		C3F2FC1E26B276A9007B6394 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				C3F2FC1F26B276C5007B6394 /* FormViewController.swift */,
+				C3F2FC2526B276DA007B6394 /* FormView.swift */,
+				C3F2FC2926B276E9007B6394 /* FormViewController.storyboard */,
+				C3F2FC2D26B276F6007B6394 /* FormViewModel.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		D8E14E521537E57197BCE715 /* Frameworks */ = {
@@ -446,6 +475,7 @@
 				C3134CAB26AC70130078BED1 /* DetailViewCOntroller.storyboard in Resources */,
 				BAEC2C51263182A600FF40F4 /* LaunchScreen.storyboard in Resources */,
 				BAEC2C4E263182A600FF40F4 /* Assets.xcassets in Resources */,
+				C3F2FC2A26B276E9007B6394 /* FormViewController.storyboard in Resources */,
 				C3134C8726A93F990078BED1 /* HomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -579,14 +609,20 @@
 				BAEC2C812631835D00FF40F4 /* APIRequest-Response.swift in Sources */,
 				BAEC2C7F2631835D00FF40F4 /* Fonts.swift in Sources */,
 				C3134CB026AC702B0078BED1 /* DetailView.swift in Sources */,
+				C3F2FC3426B27B46007B6394 /* FormField.swift in Sources */,
+				C3F2FC3326B27B46007B6394 /* FormFieldValidationRules.swift in Sources */,
 				BAEC2C45263182A300FF40F4 /* AppDelegate.swift in Sources */,
 				C3134CA526AC6FB00078BED1 /* DetailViewCOntroller.swift in Sources */,
 				C3134C9226AB0A900078BED1 /* Task.xcdatamodeld in Sources */,
+				C3F2FC2E26B276F6007B6394 /* FormViewModel.swift in Sources */,
+				C3F2FC2026B276C5007B6394 /* FormViewController.swift in Sources */,
 				BACBA4BC26322226003E2FC3 /* UIView + Additions.swift in Sources */,
 				C3134C7F26A93F510078BED1 /* RootPageRequest-Resource.swift in Sources */,
+				C3F2FC1B26B27649007B6394 /* Style+UITextField.swift in Sources */,
 				C3134CB526AC70FB0078BED1 /* DetailViewModel.swift in Sources */,
 				BAEC2C47263182A300FF40F4 /* SceneDelegate.swift in Sources */,
 				BAEC2C87263184ED00FF40F4 /* HomeView.swift in Sources */,
+				C3F2FC2626B276DA007B6394 /* FormView.swift in Sources */,
 				C332E62126ADF93200E1E811 /* CustomRadioButtonViewController.swift in Sources */,
 				BAEC2C822631835D00FF40F4 /* NetworkSession.swift in Sources */,
 				C332E62026ADF93200E1E811 /* CustomRadioButton.swift in Sources */,
